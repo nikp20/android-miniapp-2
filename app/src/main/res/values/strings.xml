@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MiniApp2</string>
+    <string name="image_desc">Home page image</string>
+
+    <string name="notif_title">Player</string>
+    <string name="notif_text">Test</string>
+    <string name="channel_desc">Description</string>
+    <string name="channel_name">Notification channel</string>
+
+    <string name="playBtn">Play</string>
+    <string name="pauseBtn">Pause</string>
+    <string name="exitBtn">Exit</string>
+    <string name="stopBtn">Stop</string>
+    <string name="gestOnBtn">Gestures ON</string>
+    <string name="gestOffBtn">Gestures OFF</string>
+    <string name="songInfo">(song info)</string>
+    <string name="duration">(duration)</string>
+    <string name="warning"><b>Warning!</b>\nLower your volume before playing :)</string>
+</resources>

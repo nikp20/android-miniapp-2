@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_desc" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_button"
+        android:text="@string/playBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="playButtonClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_home"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pause_button"
+        android:text="@string/pauseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="pauseButtonClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toEndOf="@+id/play_button"
+        app:layout_constraintTop_toTopOf="@id/image_home"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stop_button"
+        android:text="@string/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopButtonClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pause_button"
+        app:layout_constraintTop_toTopOf="@id/image_home"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gesture_on_button"
+        android:text="@string/gestOnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gesturesOnClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/play_button"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gesture_off_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gesturesOffClicked"
+        android:text="@string/gestOffBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/exit_button"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toEndOf="@+id/gesture_on_button"
+        app:layout_constraintTop_toTopOf="@id/pause_button"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="exitButtonClick"
+        android:text="@string/exitBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@id/stop_button"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/songDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/duration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pause_button"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/songInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/songInfo"
+        app:layout_constraintBottom_toTopOf="@+id/gesture_off_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/songDuration"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/warning"
+        app:layout_constraintTop_toBottomOf="@id/gesture_off_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
